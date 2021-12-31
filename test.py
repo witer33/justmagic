@@ -3,10 +3,8 @@ import justmagic
 justmagic.inject()
 
 
-def multiply(x: int, y: int) -> int:
+def multiply(x: str, y: int) -> str:
     return x * y
 
 
-test = 2
-
-print(test.multiply(20))
+print("ciao".multiply(3))
