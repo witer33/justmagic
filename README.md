@@ -1,6 +1,6 @@
 # justmagic
 
-Use a function like a static method with this mystic script, as in Nim.
+Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax) with this mystic script, like in Nim.
 <br />
 
 # Just an example
