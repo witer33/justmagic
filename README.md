@@ -27,7 +27,7 @@ me = Person("John")
 me.hello("mr.")
 ```
 
-# Install
+# Installation
 
 ```
 pip3 install justmagic
