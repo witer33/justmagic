@@ -1,0 +1,1 @@
+from justmagic.justmagic import inject

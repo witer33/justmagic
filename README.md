@@ -6,7 +6,8 @@ Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call
 # Just an example
 
 ```python
-import justmagic
+
+from justmagic import justmagic
 
 justmagic.inject()
 
@@ -19,6 +20,7 @@ class Person:
 
 def hello(who: Person, prefix: str):
     print(f"Hello {prefix} {who.name}")
+
 
 me = Person("John")
 
