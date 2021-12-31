@@ -9,7 +9,7 @@ setup(
     author='witer33',
     author_email='dev@witer33.com',
     url='https://github.com/witer33/justmagic/',
-    download_url='-',
+    download_url='https://github.com/witer33/justmagic/releases/tag/0.0.1',
     keywords=['UFCS'],
     install_requires=[
         'fishhook',
@@ -18,7 +18,7 @@ setup(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
-        'License :: OSI Approved :: gpl-3.0 License',
+        'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Programming Language :: Python :: 3.6',
     ],
 )
