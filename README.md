@@ -18,7 +18,7 @@ class Person:
 
 
 def hello(who: Person, prefix: str):
-        print(f"Hello {prefix} {who.name}")
+    print(f"Hello {prefix} {who.name}")
 
 me = Person("John")
 
