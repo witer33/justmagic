@@ -7,7 +7,7 @@ Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call
 
 ```python
 
-from justmagic import justmagic
+import justmagic
 
 justmagic.inject()
 
