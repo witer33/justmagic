@@ -1,6 +1,6 @@
 # justmagic
 
-Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax) with this mystic script, like in Nim.
+Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call_Syntax) with this mystic script, just like in Nim.
 <br />
 
 # Just an example
@@ -9,9 +9,6 @@ Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call
 
 import justmagic
 
-justmagic.inject()
-
-
 class Person:
 
     def __init__(self, name: str) -> None:
@@ -19,12 +16,12 @@ class Person:
 
 
 def hello(who: Person, prefix: str):
-    print(f"Hello {prefix} {who.name}")
+    return f"Hello {prefix} {who.name}"
 
 
 me = Person("John")
 
-me.hello("mr.")
+me.hello("mr.").print()
 ```
 
 # Installation
