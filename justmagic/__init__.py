@@ -1,1 +1,1 @@
-from justmagic.justmagic import inject
+from justmagic.justmagic import install

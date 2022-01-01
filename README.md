@@ -9,6 +9,8 @@ Use a [function as a method](https://en.wikipedia.org/wiki/Uniform_Function_Call
 
 import justmagic
 
+justmagic.install(strict=False)
+
 class Person:
 
     def __init__(self, name: str) -> None:
@@ -23,6 +25,8 @@ me = Person("John")
 
 me.hello("mr.").print()
 ```
+<br />
+<i>Strict mode enables types checking.</i>
 
 # Installation
 
