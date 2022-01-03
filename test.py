@@ -9,7 +9,6 @@ def multiply(x: str, y: int) -> str:
 
 
 def main():
-
     def add(x: int, y: int) -> int:
         return x + y
 
@@ -17,7 +16,7 @@ def main():
     print((4).add(3))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 {"a": 1}.json.dumps().print()

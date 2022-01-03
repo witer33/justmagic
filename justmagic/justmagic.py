@@ -15,7 +15,6 @@ def _explore_frame(frame, name: str) -> Callable:
 
 
 class JustACallable:
-
     def __init__(self, obj: Any, func: Union[Callable, Any], strict: bool = False):
         self.obj = obj
         self.func = func
@@ -29,8 +28,10 @@ class JustACallable:
         if self.strict and isinstance(self.func, Callable):
             hints_types: List[Type] = list(get_type_hints(self.func).values())
             if not (len(hints_types) >= 1 and isinstance(self.obj, hints_types[0])):
-                raise TypeError(f"type mismatch: {type(self.obj)} is not an instance of "
-                                f"{hints_types[0] if len(hints_types) > 0 else '<unknown>'}")
+                raise TypeError(
+                    f"type mismatch: {type(self.obj)} is not an instance of "
+                    f"{hints_types[0] if len(hints_types) > 0 else '<unknown>'}"
+                )
 
     def __getattr__(self, name: str):
         self.func = self.func.__dict__.get(name, None)
