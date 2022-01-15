@@ -34,7 +34,7 @@ class JustACallable:
                 )
 
     def __getattr__(self, name: str):
-        self.func = self.func.__dict__.get(name, None)
+        self.func = getattr(self.func, name)
         self._check_types()
         if not self.func:
             raise AttributeError(name)
