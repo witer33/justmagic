@@ -22,13 +22,16 @@ class JustACallable:
         self._check_types()
 
     def __call__(self, *args, **kwargs):
-        return self.func(self.obj, *args, **kwargs)
+        try:
+            return self.func(self.obj, *args, **kwargs)
+        except TypeError as e:
+            raise AttributeError(e.args[0])
 
     def _check_types(self) -> None:
         if self.strict and isinstance(self.func, Callable):
             hints_types: List[Type] = list(get_type_hints(self.func).values())
             if not (len(hints_types) >= 1 and isinstance(self.obj, hints_types[0])):
-                raise TypeError(
+                raise AttributeError(
                     f"type mismatch: {type(self.obj)} is not an instance of "
                     f"{hints_types[0] if len(hints_types) > 0 else '<unknown>'}"
                 )
